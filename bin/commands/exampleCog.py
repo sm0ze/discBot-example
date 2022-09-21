@@ -3,10 +3,10 @@ import discord
 from discord.ext import commands
 
 
-class defaultCommands(
+class exampleCommands(
     commands.Cog,
-    name="Default Commands",
-    description="Default Desciption",
+    name="Example Commands",
+    description="Example Desciption",
 ):
     def __init__(
         self, bot: typing.Union[commands.bot.Bot, commands.bot.AutoShardedBot]
@@ -17,7 +17,7 @@ class defaultCommands(
         name="ping",
         description="Ping...",
     )
-    async def change_stat(
+    async def ping(
         self,
         inter: discord.Interaction,
     ):
@@ -25,4 +25,4 @@ class defaultCommands(
 
 
 async def setup(bot: commands.Bot):
-    await bot.add_cog(defaultCommands(bot))
+    await bot.add_cog(exampleCommands(bot))
